@@ -1,0 +1,51 @@
+*{
+  margin:0px auto;
+}
+.App {
+  text-align: left;
+  width: 1000px;
+}
+/*All Post Section*/
+.all-post{
+  border: 1px dashed;
+}
+.all-post-area{
+  list-style-type: none;
+  border: 1px dashed;
+  width: 600px;
+  margin-bottom: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+/*New Post Section*/
+.new-post {
+border:1px dashed;
+margin-top: 20px;
+}
+.form-area {
+display: flex;
+}
+.form-area input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+
+}
+.form-area textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.form-area label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+/*Post Details Section*/
+.post-details{
+  border: 1px dashed;
+  margin-top:20px;
+}
