@@ -46,32 +46,29 @@ class App extends Component {
       ]
     }
   }
+
   handleAddInput =(fields) =>{
     let posts = this.state.posts;
         posts.push(fields);
         this.setState({posts});
         console.log(this.setState({posts}));
   }
- handlePostDetails = () =>{
-  
- }
+ handleDelete = (e) =>{
+	const deleteItems = e.target.value;
+	let posts = this.state.posts;
+			posts.splice(deleteItems,1)
+			this.setState({posts});
+}
   render() {
     return (
       <div className="App">
       <Router>
       <div>
        <h1 align="center">Welcome to my Blog</h1>
-       <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/NewPost">Add Post</NavLink></li>
-        <li><NavLink to="/PostDetails">PostDetails</NavLink></li>
-      </ul>
     <Switch>
       <Route exact path="/" render={()=>{
 	      			return(
-	      				<Home posts={this.state.posts}
-                      handlePostDetails={this.handlePostDetails}
-	      				/>
+	      				<Home posts={this.state.posts}/>
 	      			);
 	     }} />
 
@@ -81,10 +78,12 @@ class App extends Component {
        	      			);
        }} />
 
-       <Route exact path="/PostDetails" render={()=>{
-                      return(
-                        <PostDetails posts={this.state.posts}
-                                     handlePostDetails={this.handlePostDetails}/>
+       <Route exact path="/PostDetails/:postId" render={(props)=>{
+                      return (
+                        <PostDetails {...props}
+																		 posts={this.state.posts}
+																		 handleDelete={this.handleDelete}
+                                    />
                       );
         }} />
       </Switch>

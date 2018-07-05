@@ -60,12 +60,16 @@ class NewPost extends Component {
                        onChange={this.onChange} />
             </label>
             <br />
-            <button onClick={this.handleAddInput}>
-            <NavLink NavLink exact to="/">
+            <button onClick={this.handleAddInput} className="save-button">
+            <NavLink exact to="/">
              Save
             </NavLink>
             </button>
-            <button onClick={this.handleCancel}>Cancel</button>
+            <button onClick={this.handleCancel} className="cancel-button">
+						  <NavLink exact to="/">
+						       Cancel
+						  </NavLink>
+						</button>
           </form>
         </div>
       </div>

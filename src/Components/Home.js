@@ -14,19 +14,18 @@ class Home extends Component {
   render() {
     let posts = this.props.posts.map((post,index) =>
                       <li key={index.toString()} className="all-post-area" onClick={this.handlePostDetails}>
-                       <NavLink NavLink exact to={`/PostDetails/${index}`}>
-                        <b>Index:</b> {index} <br/>
+                        <NavLink exact to={`/PostDetails/${index}`} className="all-post-items">
                         <b>Title: </b> {post.title} <br />
                         <b>Category: </b>{post.category}
                         </NavLink>
                       </li>);
     return (
       <div className="all-post">
-      <button className="addButton" >
-        <NavLink NavLink exact to="/NewPost">
+        <div>
+				 <NavLink NavLink exact to="/NewPost" className="addButton">
           Add New Post
         </NavLink>
-      </button>
+				</div>
         {posts}
       </div>
     );

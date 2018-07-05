@@ -13,14 +13,46 @@
   list-style-type: none;
   border: 1px dashed;
   width: 600px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
   text-align: center;
   cursor: pointer;
+}
+.all-post-items{
+ text-decoration: none;
+ font-family: cursive;
+}
+.addButton{
+  float: right;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top:50px;
+  cursor: pointer;
+  margin-top:-1px;
+  margin-right:420px;
 }
 /*New Post Section*/
 .new-post {
 border:1px dashed;
 margin-top: 20px;
+}
+.save-button{
+  text-decoration: none;
+  background-color: gray;
+  padding: 10px 25px;
+  color:black;
+}
+.cancel-button{
+  float: left;
+  text-decoration: none;
+  background-color: gray;
+  padding: 10px 25px;
+  color:black;
 }
 .form-area {
 display: flex;
@@ -48,4 +80,29 @@ display: flex;
 .post-details{
   border: 1px dashed;
   margin-top:20px;
+}
+.post-details h1{
+  text-decoration: underline;
+}
+.single-post{
+  list-style-type:none;
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+}
+.delete-button{
+float: right;
+text-decoration: none;
+background-color: gray;
+padding: 10px 25px;
+margin-top: -160px;
+color:black;
+}
+.back-button{
+  float: left;
+  text-decoration: none;
+  background-color: gray;
+  padding: 10px 25px;
+  margin-top: -160px;
+  color:black;
 }
